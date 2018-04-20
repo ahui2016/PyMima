@@ -299,3 +299,25 @@ class AutoCloseTab(QtWidgets.QWidget):
         self.stop_and_lock()
         self.lcd.display(0)
         self.step = 0
+
+
+class AboutTab(QtWidgets.QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self._init_ui_()
+
+    def _init_ui_(self):
+        vBox = QtWidgets.QVBoxLayout()
+        self.setLayout(vBox)
+
+        about = QtWidgets.QLabel(
+            "Source Code:\n"
+            "https://github.com/ahui2016/PyMima\n\n"
+            "License:\n"
+            "GPL (required by PyQt5)"
+        )
+        about.setAlignment(QtCore.Qt.AlignHCenter)
+
+        vBox.addStretch(1)
+        vBox.addWidget(about)
+        vBox.addStretch(3)
