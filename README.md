@@ -54,14 +54,16 @@
 1. 安装 Python
 2. `pip install PyQt5`
 3. `pip install PyNaCl`
-4. `python create_default_account.py`
+4. 下载本程序源代码
+  - https://github.com/ahui2016/PyMima/archive/master.zip
+5. `python create_default_account.py`
   - 这一步会创建一个默认账户，同时生产 pymima.db
   - 初始密码就在 `create_default_account.py` 里，可以先修改后再创建
   - 创建账户后，记得删除该文件里的密码
-5. `python mainwindow.py`
+6. `python mainwindow.py`
   - 这一步正式运行程序
   - Windows用户可以修改该文件的缀名 mainwindow.pyw，然后双击该文件即可启动程序
-6. `python change_master_password.py`
+7. `python change_master_password.py`
   - 当需要更改主密码时，使用该命令
   - 修改前，建议先备份 pymima.db
   - 先编辑文件，填写旧密码和新密码，再执行该文件
