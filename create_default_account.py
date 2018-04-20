@@ -3,14 +3,15 @@ import nacl.utils
 import hashlib
 import base64
 import sys
-
 from connection import create_connection
 from mimabox import MimaBox
 
 
+DEFAULT_PASSWORD = "keep all secrets"
+
+
 def create_default_account():
-    default_password = "keep all secrets"
-    key = hashlib.sha256(default_password.encode()).digest()
+    key = hashlib.sha256(DEFAULT_PASSWORD.encode()).digest()
     secretbox = nacl.secret.SecretBox(key)
     MimaBox.secretbox = secretbox
 
