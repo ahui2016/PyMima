@@ -3,6 +3,7 @@ import nacl.utils
 import hashlib
 import base64
 import sys
+import os
 from connection import create_connection
 from mimabox import MimaBox
 
@@ -36,6 +37,12 @@ def random_text():
 
 
 if __name__ == '__main__':
+    pymima_db = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), 'pymima.db')
+    if os.path.exists(pymima_db):
+        print("Warning: "
+              "'pymima.db' already exists, can not create new account.\n")
+        sys.exit(1)
     if not create_connection():
         sys.exit(1)
     create_default_account()
