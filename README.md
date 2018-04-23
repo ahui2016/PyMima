@@ -51,7 +51,7 @@
 
 ## 安装和使用
 
-1. 安装 Python
+1. 安装 Python (由于图新鲜用了 f-string, 因此需要3.6.2+)
 2. `pip install PyQt5`
 3. `pip install PyNaCl`
 4. 下载本程序源代码
