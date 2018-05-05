@@ -204,7 +204,7 @@ class RecycleBinTab(MyTabWidget):
         self.homeTableModel = homeTableModel
 
 
-class AutoCloseTab(QtWidgets.QWidget):
+class AutoLockTab(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
 

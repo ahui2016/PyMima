@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow, QWidget, QTabWidget, QVBoxLayout
 import connection
-from mytabwidget import HomeTab, RecycleBinTab, AutoCloseTab, AboutTab
+from mytabwidget import HomeTab, RecycleBinTab, AutoLockTab, AboutTab
 from mimabox import MimaBox
 
 
@@ -47,8 +47,8 @@ class MimaWindow(QMainWindow):
         self.homeTab.set_recyclebin_model(self.recycleBinTab.model)
         self.recycleBinTab.set_hometable_model(self.homeTab.model)
 
-        autoCloseTab = AutoCloseTab(tabWidget)
-        tabWidget.addTab(autoCloseTab, 'Auto Close')
+        autoCloseTab = AutoLockTab(tabWidget)
+        tabWidget.addTab(autoCloseTab, 'Auto Lock')
         self.homeTab.set_autoclose_tab(autoCloseTab)
 
         aboutTab = AboutTab()
